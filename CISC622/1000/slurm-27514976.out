@@ -1,0 +1,123 @@
+========== Profiling CPU Cache Metrics ==========
+
+Profiling Default Implementation
+-----------------------------------
+First 10 unsorted values:
+408 92 755 688 85 407 411 515 74 240 ... (only first 10 shown)
+
+First 10 sorted values:
+2 2 3 4 5 7 8 11 11 12 ... (only first 10 shown)
+
+Execution time: 1.671314e-04 seconds
+
+ Performance counter stats for './default':
+
+               539      cache-misses:u            #    8.514 % of all cache refs    
+              6331      cache-references:u                                          
+
+       0.001262916 seconds time elapsed
+
+       0.001246000 seconds user
+       0.000000000 seconds sys
+
+
+
+Default Implementation Profiling Completed
+
+Profiling Interchange Implementation
+-----------------------------------
+First 10 unsorted values:
+408 92 755 688 85 407 411 515 74 240 ... (only first 10 shown)
+
+First 10 sorted values:
+2 2 3 4 5 7 8 11 11 12 ... (only first 10 shown)
+
+Execution time: 3.031015e-03 seconds
+
+ Performance counter stats for './interchange':
+
+               328      cache-misses:u            #    5.125 % of all cache refs    
+              6400      cache-references:u                                          
+
+       0.004214770 seconds time elapsed
+
+       0.004164000 seconds user
+       0.000000000 seconds sys
+
+
+
+Interchange Implementation Profiling Completed
+
+Profiling Fusion Implementation
+-----------------------------------
+First 10 unsorted values:
+801 101 218 223 705 416 216 920 172 237 ... (only first 10 shown)
+
+First 10 sorted values:
+0 0 4 6 7 8 12 15 16 17 ... (only first 10 shown)
+
+Execution time: 1.609325e-04 seconds
+
+ Performance counter stats for './fusion':
+
+               215      cache-misses:u            #    3.446 % of all cache refs    
+              6239      cache-references:u                                          
+
+       0.001335020 seconds time elapsed
+
+       0.000000000 seconds user
+       0.001246000 seconds sys
+
+
+
+Fusion Implementation Profiling Completed
+
+Profiling Blocking Implementation
+-----------------------------------
+First 10 unsorted values:
+801 101 218 223 705 416 216 920 172 237 ... (only first 10 shown)
+
+First 10 sorted values:
+0 0 4 6 7 8 12 15 16 17 ... (only first 10 shown)
+
+Execution time: 8.893013e-05 seconds
+
+ Performance counter stats for './blocking':
+
+              4903      cache-misses:u            #   75.489 % of all cache refs    
+              6495      cache-references:u                                          
+
+       0.001643644 seconds time elapsed
+
+       0.000000000 seconds user
+       0.001509000 seconds sys
+
+
+
+Blocking Implementation Profiling Completed
+
+Profiling Inlining Implementation
+-----------------------------------
+First 10 unsorted values:
+801 101 218 223 705 416 216 920 172 237 ... (only first 10 shown)
+
+First 10 sorted values:
+0 0 4 6 7 8 12 15 16 17 ... (only first 10 shown)
+
+Execution time: 1.380444e-04 seconds
+
+ Performance counter stats for './inlining':
+
+              1670      cache-misses:u            #   25.488 % of all cache refs    
+              6552      cache-references:u                                          
+
+       0.001386860 seconds time elapsed
+
+       0.000000000 seconds user
+       0.001301000 seconds sys
+
+
+
+Inlining Implementation Profiling Completed
+
+========== CPU Cache Profiling Completed ==========
